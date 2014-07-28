@@ -1,12 +1,10 @@
 {
-  "name": "random-word",
+  "name": "random-word-by-length",
   "version": "0.1.0",
   "description": "Returns a random English word",
   "license": "MIT",
-  "bin": {
-    "random-word": "cli.js"
-  },
-  "repository": "sindresorhus/random-word",
+  "bin":  "cli.js",
+  "repository": "calvinmetcalf/random-word",
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
@@ -33,7 +31,7 @@
     "cli"
   ],
   "dependencies": {
-    "word-list": "~0.1.0",
+    "word-list-json": "^0.2.0",
     "unique-random": "~0.1.0"
   },
   "devDependencies": {
