@@ -1,25 +1,25 @@
-# random-word [![Build Status](https://travis-ci.org/sindresorhus/random-word.svg?branch=master)](https://travis-ci.org/sindresorhus/random-word)
+# random-word-by-length
 
-> Returns a random English word from the [Letterpress Word List](https://github.com/atebits/Words/blob/master/Words/en.txt)
+> Returns a random English word from the [Letterpress Word List](https://github.com/atebits/Words/blob/master/Words/en.txt) with an opitonal max length.
 
 
 ## Install
 
 ```bash
-$ npm install --save random-word
+$ npm install --save random-word-by-length
 ```
 
 
 ## Usage
 
 ```js
-var randomWord = require('random-word');
+var randomWord = require('random-word-by-length');
 
 randomWord();
 //=> ferriferous
 
-randomWord();
-//=> microfloppies
+randomWord(6);
+//=> boride
 ```
 
 
@@ -28,14 +28,17 @@ randomWord();
 You can also use it as a CLI app by installing it globally:
 
 ```bash
-$ npm install --global random-word
+$ npm install --global random-word-by-length
 ```
 
 ### Usage
 
 ```bash
-$ random-word
+$ random-word-by-length
 ferriferous
+
+$ random-word-by-length -l 5
+goor
 ```
 
 
@@ -44,7 +47,7 @@ ferriferous
 Use it to generate project/release names:
 
 ```bash
-$ echo $(random-word)-$(random-word)
+$ echo $(random-word-by-length)-$(random-word-by-length)
 blacksnake-nautics
 ```
 
