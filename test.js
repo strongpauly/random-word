@@ -2,36 +2,54 @@
 var assert = require('assert');
 var randomWord = require('./index');
 
-it('should return a random word', function () {
-	assert(randomWord().length > 1);
+describe('random-words-of-length', function() {
+	describe('should return words exactly as long as passed number', function () {
+	  it ('2', function () {
+	    var i = 200;
+	    while (--i) {
+	      assert.equal(randomWord(2).length, 2);
+	    }
+	  });
+	  var j = 2;
+	  var len = randomWord.maxLen;
+	  while (++j <= len) {
+	    (function (){
+	      var k = j;
+				if(randomWord.hasWordsOfLength(k)) {
+					it ('' + k, function () {
+		        var i = 200;
+		        while (--i) {
+		          assert.equal(randomWord(k).length, k);
+		        }
+		      });
+				}
+	    }());
+	  }
+	});
+
+	describe('should throw errors', function() {
+		it('if ask for lengths greater than the max', function() {
+			assert.throws(function(){
+				randomWord(randomWord.maxLen + 1);
+			});
+		});
+
+		describe('if ask for length that is reported to not have any words', function() {
+			var j = 2;
+		  var len = randomWord.maxLen;
+		  while (++j <= len) {
+		    (function (){
+		      var k = j;
+					if(!randomWord.hasWordsOfLength(k)) {
+						it ('' + k, function () {
+							assert.throws(function(){
+								randomWord(k);
+							});
+			      });
+					}
+		    }());
+		  }
+
+		});
+	});
 });
-
-describe ('should respect length', function () {
-  it (2, function () {
-    var i = 200;
-    while (--i) {
-      assert.equal(randomWord(2).length, 2);
-    }
-  });
-  var j = 2;
-  var len = 30;
-  while (++j < len) {
-    (function (){
-      var k = j;
-      it (k, function () {
-        var i = 200;
-        while (--i) {
-          assert(randomWord(k).length <= k);
-        }
-      });
-    }());
-  }
-
-});
-
-it ('should ignore a non-number', function () {
-    var i = 200;
-    while (--i) {
-      assert(randomWord('foo').length > 1);
-    }
-  });
