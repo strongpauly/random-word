@@ -1,4 +1,4 @@
-# random-word-by-length
+# random-word-of-length
 
 > Returns a random English word from the [Letterpress Word List](https://github.com/atebits/Words/blob/master/Words/en.txt) by length.
 
