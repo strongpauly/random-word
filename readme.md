@@ -1,57 +1,39 @@
 # random-word-by-length
 
-> Returns a random English word from the [Letterpress Word List](https://github.com/atebits/Words/blob/master/Words/en.txt) with an opitonal max length.
+> Returns a random English word from the [Letterpress Word List](https://github.com/atebits/Words/blob/master/Words/en.txt) by length.
 
 
 ## Install
 
 ```bash
-$ npm install --save random-word-by-length
+$ npm install --save random-word-of-length
 ```
 
 
 ## Usage
 
 ```js
-var randomWord = require('random-word-by-length');
-
-randomWord();
-//=> ferriferous
+var randomWord = require('random-word-of-length');
 
 randomWord(6);
 //=> boride
 ```
-
 
 ## CLI
 
 You can also use it as a CLI app by installing it globally:
 
 ```bash
-$ npm install --global random-word-by-length
+$ npm install --global random-word-of-length
 ```
 
 ### Usage
 
 ```bash
-$ random-word-by-length
-ferriferous
 
-$ random-word-by-length -l 5
+$ random-word-by-length -l 4
 goor
 ```
 
-
-### Tip
-
-Use it to generate project/release names:
-
-```bash
-$ echo $(random-word-by-length)-$(random-word-by-length)
-blacksnake-nautics
-```
-
-
 ## License
-
 [MIT](http://opensource.org/licenses/MIT) © [Sindre Sorhus](http://sindresorhus.com)

@@ -1,10 +1,10 @@
 {
-  "name": "random-word-by-length",
-  "version": "0.1.0",
+  "name": "random-word-of-length",
+  "version": "1.0.0",
   "description": "Returns a random English word",
   "license": "MIT",
   "bin":  "cli.js",
-  "repository": "calvinmetcalf/random-word",
+  "repository": "strongpauly/random-word",
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
